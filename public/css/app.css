@@ -1,0 +1,30 @@
+body {
+    height: auto;
+}
+
+
+#tituloIndex {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#tituloReceta {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.card-body{
+    margin-left: 0px;
+}
+
+hr {
+    display: block;
+    unicode-bidi: isolate;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 1px;
+}
