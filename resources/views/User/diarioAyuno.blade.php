@@ -1,4 +1,4 @@
-@extends("layouts.landingUser")
+@extends("layouts.landing")
 
 @section("title", "Fast4UBody")
 

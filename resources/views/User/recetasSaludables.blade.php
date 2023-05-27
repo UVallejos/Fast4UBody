@@ -1,36 +1,52 @@
-@extends("layouts.landingUser")
+@extends("layouts.landing")
 
 
 @section("title", "Fast4UBody")
 
 @section("content")
 <br>
+
+
 <div class="container">
-    @foreach ($recetas as $receta)
-    <div class="row justify-content align-items g-2">
-            <div class="col">
-                <div class="card shadow  mb-5 bg-body rounded">
-                    <img src="{{ asset($receta->imagen) }}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h3 class="card-title">{{ $receta->nombreReceta }}</h3>
-                        <p class="card-text">{{ $receta->procedimiento }}</p>
-                        <table>
-                            <tbody>
-                                @php
-                                    $ingredientes = explode(',', $receta->ingredientes);
-                                @endphp
-                                @foreach ($ingredientes as $ingrediente)
-                                    <ul>
-                                        <li>{{ ucfirst($ingrediente) }}</li>
-                                    </ul>
-                                @endforeach
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
+    <div class="row ">
+        @for($i = 1; $i <= 6; $i++)
+        <div class="col-6">
+            <div class="card shadow  mb-5 bg-body rounded" id="card_receta">
+            @foreach ($recetas as $receta)
+                @component("_components.card_receta")
+                    @slot("src", asset($receta->imagen))
+                    @slot("title", $receta->nombreReceta)
+                    @slot("content", $receta->procedimiento)
+                    @slot("ingredientes")
+                    <table>
+                        <tbody>
+                            @php
+                                $ingredientes = explode(',', $receta->ingredientes);
+                            @endphp
+                            @foreach ($ingredientes as $ingrediente)
+                                <ul>
+                                    <li>{{ ucfirst($ingrediente) }}</li>
+                                </ul>
+                            @endforeach
+                        </tbody>
+                    </table>
+                    @endslot
+
+                @endcomponent
+            
+            @endforeach  
+            </div>   
         </div>
-    @endforeach 
+        @endfor
+    </div>
+    <br>
 </div>
 
 @endsection
+
+
+
+
+
+
+
