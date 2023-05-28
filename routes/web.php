@@ -25,7 +25,7 @@ Definimos las rutas, asociamos a los archivos que tenemos en Views y colocamos u
 Route::view("/", "index")->name("index");
 Route::view("/iniciar_sesion", "iniciar_sesion")->name("iniciarSesion");
 Route::view("/registro", "registro")->name("registro");
-Route::view("/sobre_el_ayuno", "sobreAyuno")->name("sobreAyuno");
+Route::view("/sobre_el_ayuno", "sobreAyuno3")->name("sobreAyuno");
 Route::view("/herramientas", "herramientas")->name("herramientas");
 
 //Usuario
@@ -38,6 +38,8 @@ Route::put("/mi-cuenta/editar", [UserController::class, "modificar_usuario"])->m
 //Diario Ayuno
 Route::put("/diario-ayuno/actualizar", [DiarioController::class, "actualizar_registros"])->middleware("auth")->name("actualizar_diario");
 Route::get("/diario-ayuno", [DiarioController::class, "mostrar_diario"])->middleware("auth")->name("mostrar_diario");
+Route::post("/diario-ayuno/eliminar", [DiarioController::class, "eliminar_registro"])->middleware("auth")->name("eliminar_registro");
+Route::post("/diario-ayuno/eliminarM", [DiarioController::class, "eliminar_registro_m"])->middleware("auth")->name("eliminar_registro_m");
 
 //Ayuno
 Route::get("/iniciar-ayuno", [AyunoController::class, "iniciar_ayuno"])->middleware("auth")->name("iniciar_ayuno");

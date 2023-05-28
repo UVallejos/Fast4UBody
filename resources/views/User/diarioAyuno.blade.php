@@ -13,7 +13,7 @@
         <div class="row">
           <div class="col">
             <h4 class="text-center">Ayuno Actual</h4>
-            <div class="card">
+            <div class="card rounded shadow p-3 mb-5 bg-body rounded">
                 <div class="card-body">
                     <form action="{{ route('finalizar_ayuno') }}" method="post">
                       @csrf
@@ -21,12 +21,12 @@
                         <input type="submit" class="btn btn-danger" value="Finalizar Ayuno">
                       @endif
                       
-                      <table class="table">
+                      <table class="table table-striped table-hover">
                           <thead>
                             <tr>
-                              <th scope="col">Fecha y hora Inicio</th>
+                              <th scope="col">Fecha y Hora Inicio</th>
                               <th scope="col">Tiempo Ayunando</th>
-                              <th scope="col">Hora de Comer</th>
+                              <th scope="col">Fecha y Hora de Comer</th>
                             </tr>
                           </thead>
                           <tbody>
@@ -48,7 +48,7 @@
                                         <tr>
                                             <td>{{ $inicio }}</td>
                                             <td>{{ ($duracion ) }}</td>
-                                            <td>{{ \Carbon\Carbon::parse($ayun->finAyuno)->format("H:i")  }}</td>   
+                                            <td>{{ \Carbon\Carbon::parse($ayun->finAyuno)->format("d-m-Y H:i:s")  }}</td>   
                                         </tr>
                                     @endif
                                 @endforeach
@@ -63,9 +63,9 @@
           </div>
           <div class="col">
             <h4 class="text-center">Medidas</h4>
-            <div class="card">
+            <div class="card rounded shadow p-3 mb-5 bg-body rounded">
                 <div class="card-body">
-                    <table class="table">
+                    <table class="table table-striped table-hover ">
                         <thead>
                           <tr>
                             <th scope="col">Fecha</th>
@@ -73,6 +73,7 @@
                             <th scope="col">Peso</th>
                             <th scope="col">Peso Objetivo</th>
                             <th scope="col">IMC</th>
+                            <th>Eliminar</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -83,6 +84,14 @@
                                   <td>{{ $item->pesoInicial }} Kg</td>
                                   <td>{{ $item->pesoObjetivo }} Kg</td>
                                   <td>{{ $item->imc }}</td>
+                                  <td>
+                                    <form action="{{ route('eliminar_registro_m') }}" method="POST" >
+                                        @csrf
+                                        <button name="id" type="submit" class="btn btn-danger" value="{{ $item->id }}" acc>
+                                          Eliminar
+                                        </button>
+                                      </form>
+                                  </td>
                                 </tr>
                               @empty
 
@@ -97,9 +106,9 @@
         <div class="row">
             <div class="col">
                 <h4 class="text-center">Historial Ayuno</h4>
-                <div class="card">
+                <div class="card rounded shadow p-3 mb-5 bg-body rounded">
                     <div class="card-body">
-                        <table class="table">
+                        <table class="table table-bordered align-middle">
                             <thead>
                               <tr>
                                 <th>Fecha inicio</th>
@@ -108,6 +117,7 @@
                                 <th>Hora Fin</th>
                                 <th>Tiempo Ayunado</th>
                                 <th>Tipo Ayuno</th>
+                                <th>Eliminar</th>
                               </tr>
                             </thead>
                             <tbody>
@@ -130,6 +140,14 @@
                                   <td>{{ $ayuno->updated_at->format('h:i a') }}</td>
                                   <td>{{ $duracion }}</td>
                                   <td>{{ $ayuno->tipoAyuno }} Hrs</td>
+                                  <td>
+                                    <form action="{{ route('eliminar_registro') }}" method="POST" >
+                                        @csrf
+                                        <button name="id" type="submit" class="btn btn-danger" value="{{ $ayuno->id }}" acc>
+                                          Eliminar
+                                        </button>
+                                      </form>
+                                  </td>
                                 </tr>
                               @empty
                                 <p>Sin datos</p>

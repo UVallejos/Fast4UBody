@@ -9,12 +9,10 @@
 <div class="container-fluid">
         <div class="row justify-content-center align-items-center g-2">
                 
-            <div class="col  card rounded shadow p-3 mb-5 bg-body rounded" id="miCuenta">
+            <div class="col-8 card rounded shadow p-3 mb-5 bg-body rounded" id="miCuenta">
                  @if(session('success'))
                     <div class="alert alert-success" role="alert">
-                        <ul>
-                            {{ session('success') }}
-                        </ul>
+                        {{ session('success') }}
                     </div>
                 @endif
                 <section id="register_div">

@@ -7,6 +7,7 @@ use App\Models\User;
 use App\Models\Diario;
 use App\Models\Ayuno;
 use Illuminate\Support\Facades\Auth;
+Use App\Http\Controllers\Redirect;
 
 class DiarioController extends Controller
 {
@@ -35,5 +36,25 @@ class DiarioController extends Controller
         $diarios->imc = $user->calcularIMC();
         $diarios->user_id = $user->id;
         $diarios->save();
+    }
+
+    public function eliminar_registro(Request $request){
+        $user = Auth::user();
+
+        $id = $request->input("id");
+
+        Ayuno::find($id)->delete();
+
+        return redirect()->route("mostrar_diario")->with('refresh', true);
+    }
+
+    public function eliminar_registro_m(Request $request){
+        $user = Auth::user();
+
+        $id = $request->input("id");
+
+        Diario::find($id)->delete();
+
+        return redirect()->route("mostrar_diario")->with('refresh', true);
     }
 }

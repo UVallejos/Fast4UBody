@@ -5,11 +5,11 @@
 
 
 @section("content")
-
+<br>
 <div class="container">
     <div class="row justify-content-center align-items-center g-2">
       <div class="col-8">
-        <img src="{{ asset('assets/img/fondo.jpg') }}" class="img-fluid" alt="Bienvenido">
+        <img src="{{ asset('assets/img/fondo.jpg') }}" class="img-fluid shadow-lg rounded" alt="Bienvenido">
       </div>
     </div>
     <div class="row justify-content-center align-items-center g-2" id="tituloIndex">

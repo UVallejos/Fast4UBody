@@ -29,7 +29,7 @@ class DiarioSeeder extends Seeder
                 'pesoObjetivo' => 75,
                 'altura' => 180,
                 'imc' => 26.1,
-                'user_id' => 2
+                'user_id' => 1
 
         ]);
     }
