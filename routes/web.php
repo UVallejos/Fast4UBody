@@ -18,7 +18,7 @@ use App\Http\Controllers\RecetaController;
 */
 
 /*
-Definimos las rutas, asociamos a los archivos que tenemos en Views y colocamos un nombre a la ruta
+Definimos las rutas, asociamos a los archivos que tenemos con el tipo de ruta correspondiente y colocamos un nombre a la ruta
 */ 
 
 //Vistas estáticas

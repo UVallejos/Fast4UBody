@@ -8,8 +8,8 @@
             <div class="row h-100">
                 <aside class="col-md-3">
                     <div class="mt-4 mb-3 pt-4 sticky-top" id="sidemenu">
-                        <div class="pt-1">
-                            <ul class="nav nav-pills flex-md-column flex-row justify-content-between bg-light">
+                        <div class="pt-1" >
+                            <ul class="nav nav-pills flex-md-column flex-row justify-content-between bg-light" >
                                 <li class="nav-item"><a href="#tab1" class="nav-link">Sobre el Ayuno</a></li>
                                 <li class="nav-item"><a href="#sec1" class="nav-link">Preguntas y Respuestas</a></li>
                                 <li class="nav-item"><a href="#sec2" class="nav-link">Noticias</a></li>

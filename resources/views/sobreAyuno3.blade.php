@@ -3,28 +3,24 @@
 
 @section('content')
 <br>
-<div class="container">
-    <div class="row shadow p-3 mb-5 bg-body rounded">
-        <aside class="col-md-3" >
-            <div class="mt-4 mb-3 pt-4 sticky-md-top" id="sidemenu">
-                <ul class="nav flex-md-column flex-row justify-content-between bg-light shadow p-3 mb-5 bg-body rounded">
-                    <li class="nav-item">
-                        <a href="#SobreAyuno" class="nav-link">Sobre el Ayuno</a>
-                        <ul class="nav flex-column pl-3 sublinks">
-                            <li><a class="nav-link" href="#01">-Los Orígenes del Ayuno</a></li>
-                            <li><a class="nav-link" href="#02">-La Autofagia y el Rejuvenecimiento Celular</a></li>
-                            <li><a class="nav-link" href="#03">-Diferencia entre Ayuno e Inanición</a></li>
-                            <li><a class="nav-link" href="#04">-¿Cómo empezar con el Ayuno Intermitente?</a></li>
-                            <li><a class="nav-link" href="#05">-Los diferentes tipos de Ayuno</a></li>
-                            <li><a class="nav-link" href="#06">-Consejos para romper el Ayuno</a></li>
-                        </ul>
-                        <a href="#PreguntasFrecuentes" class="nav-link">Preguntas y Respuestas</a>
-                        <a href="#Noticias" class="nav-link">Noticias</a>
-                    </li>
-                    
+<div class="container-fluid">
+    <div class="row flex shadow p-3 mb-5 bg-body rounded">
+        <aside class="col-auto col-md-3 col-xl-2 px-sm-2 px-0" id="asideNav">
+            <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 sticky-md-top" id="sidemenu">
+                <a href="#SobreAyuno" class="nav-link align-middle px-0">Sobre el Ayuno</a>
+                <ul  class="nav flex-md-column flex-row justify-content-between ">
+                    <li class=""><a class="nav-link" href="#01">Los Orígenes del Ayuno</a></li>
+                    <li class=""><a class="nav-link" href="#02">La Autofagia</a></li>
+                    <li class=""><a class="nav-link" href="#03">Diferencia entre Ayuno e Inanición</a></li>
+                    <li class=""><a class="nav-link" href="#04">¿Cómo empezar?</a></li>
+                    <li class=""><a class="nav-link" href="#05">Los diferentes tipos de Ayuno</a></li>
+                    <li class=""><a class="nav-link" href="#06">Consejos para romper el Ayuno</a></li>
                 </ul>
+                <a href="#PreguntasFrecuentes" class="nav-link align-middle px-0">Preguntas y Respuestas</a>
+                <a href="#Noticias" class="nav-link align-middle px-0">Noticias</a>
             </div>
         </aside>
+        
 
         <div class="col-md-9">
             <div class="row">

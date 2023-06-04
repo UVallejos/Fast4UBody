@@ -44,12 +44,16 @@
 
                                         $tiempoHastaComer = Carbon\Carbon::parse($ayun->finAyuno)->diffForHumans();
                                     @endphp
-                                    @if($ayun->actualmenteAyunando)
+                                    @if($inicio <= $fin and $ayun->actualmenteAyunando)
                                         <tr>
                                             <td>{{ $inicio }}</td>
                                             <td>{{ ($duracion ) }}</td>
                                             <td>{{ \Carbon\Carbon::parse($ayun->finAyuno)->format("d-m-Y H:i:s")  }}</td>   
                                         </tr>
+                                    @else
+                                    @php
+                                        
+                                    @endphp
                                     @endif
                                 @endforeach
                           

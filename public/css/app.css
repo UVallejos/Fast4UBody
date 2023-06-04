@@ -40,7 +40,7 @@ hr {
   }
 
 
-/*Estilos Nav Bar*/
+/*Estilos Nav Bar General*/
 @import url('https://fonts.googleapis.com/css2?family=Crete+Round&family=Nunito&family=Raleway:ital,wght@1,600&display=swap');
 
 #navBarUl {
@@ -84,13 +84,31 @@ hr {
   text-decoration: none;
   color: black;
 }
-
-
 .item-desplegable:hover {
   background-color: rgb(250, 219, 83);
 }
 
+/*Estilos NavBar Sobre Ayuno*/
+#asideNav {
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
 
+#asideNav a{
+  text-decoration: none;
+  color: black;
+  font-family: 'Nunito', sans-serif;
+  padding-top: 10px;
+  padding-right: 16px;
+  padding-bottom: 8px;
+}
 
+#sidemenu li:hover{
+  border-radius: 15px;
+  background-color: rgb(250, 219, 83);
+}
 
-
+#sidemenu a:hover{
+  border-radius: 15px;
+  background-color: rgb(250, 219, 83);
+}
