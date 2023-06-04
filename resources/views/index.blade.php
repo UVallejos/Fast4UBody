@@ -6,16 +6,15 @@
 
 @section("content")
 <br>
-<div class="container">
-    <div class="row justify-content-center align-items-center g-2">
-      <div class="col-8">
-        <img src="{{ asset('assets/img/fondo.jpg') }}" class="img-fluid shadow-lg rounded" alt="Bienvenido">
+  <div class="container">
+        <h1 class="display-3 text-center">Bienvenidos a Fast4UBody</h1>
+      <div class="row justify-content-center align-items-center g-2">
+        <div class="col-8">
+          <img src="{{ asset('assets/img/fondo.jpg') }}" class="img-fluid shadow-lg rounded" alt="Bienvenido">
+        </div>
       </div>
-    </div>
-    <div class="row justify-content-center align-items-center g-2" id="tituloIndex">
-      <h1 class="display-3 text-center">Buenvenidos a Fast4UBody</h1>
-    </div>
   </div>
+  <br>
   <div class="container-sm">
     <div class="row">
       <div class="col">

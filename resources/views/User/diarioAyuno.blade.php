@@ -10,11 +10,11 @@
     </div>
     <br>
     <div class="container">
-        <div class="row">
+        <div class="row p-3 mb-5">
           <div class="col">
             <h4 class="text-center">Ayuno Actual</h4>
             <div class="card rounded shadow p-3 mb-5 bg-body rounded">
-                <div class="card-body">
+                <div class="table-responsive" >
                     <form action="{{ route('finalizar_ayuno') }}" method="post">
                       @csrf
                       @if ($ayuno->where('actualmenteAyunando', true)->count() > 0)
@@ -24,9 +24,13 @@
                       <table class="table table-striped table-hover">
                           <thead>
                             <tr>
-                              <th scope="col">Fecha y Hora Inicio</th>
-                              <th scope="col">Tiempo Ayunando</th>
-                              <th scope="col">Fecha y Hora de Comer</th>
+                              <th></th>
+                              <th colspan="2">Fecha y Hora Inicio</th>
+                              <th></th>
+                              <th colspan="2">Tiempo Ayunando</th>
+                              <th></th>
+                              <th colspan="2">Fecha y Hora de Comer</th>
+                              <th>Tipo de Ayuno</th>
                             </tr>
                           </thead>
                           <tbody>
@@ -34,7 +38,7 @@
 
                               @foreach($ayuno as $ayun)
                                     @php
-                                        $inicio = Carbon\Carbon::parse($ayun->inicioAyuno);
+                                        $inicio = Carbon\Carbon::parse($ayun->inicioAyuno)->format("d-m-Y H:i:s");
                                         $fin = Carbon\Carbon::parse($ayun->finAyuno);
 
                                         $diferenciaSegundos = Carbon\Carbon::now()->diffInSeconds($inicio);
@@ -46,18 +50,33 @@
                                     @endphp
                                     @if($inicio <= $fin and $ayun->actualmenteAyunando)
                                         <tr>
-                                            <td>{{ $inicio }}</td>
-                                            <td>{{ ($duracion ) }}</td>
-                                            <td>{{ \Carbon\Carbon::parse($ayun->finAyuno)->format("d-m-Y H:i:s")  }}</td>   
+                                            <th></th>
+                                            <td colspan="2">{{ $inicio }}</td>
+                                            <td></td>
+                                            <td colspan="2">{{ ($duracion ) }}</td>
+                                            <td></td>
+                                            <td colspan="2">{{ \Carbon\Carbon::parse($ayun->finAyuno)->format("d-m-Y H:i:s")  }}</td> 
+                                            <td>{{ $ayun->tipoAyuno }} Horas</td>
                                         </tr>
                                     @else
-                                    @php
-                                        
-                                    @endphp
+                                      <tr>
+                                        <th></th>
+                                        <td colspan="2"></td>
+                                        <td></td>
+                                        <td colspan="2"></td>
+                                        <td></td>
+                                        <td colspan="2"></td> 
+                                        <td></td>
+                                    </tr>
                                     @endif
                                 @endforeach
                           
                             @else
+                              <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
                             @endif
                         </tbody>
                       </table>
@@ -65,10 +84,10 @@
                 </div>
             </div>
           </div>
-          <div class="col">
+          <div class="col table-responsive">
             <h4 class="text-center">Medidas</h4>
             <div class="card rounded shadow p-3 mb-5 bg-body rounded">
-                <div class="card-body">
+                <div class="table-responsive">
                     <table class="table table-striped table-hover ">
                         <thead>
                           <tr>
@@ -108,10 +127,10 @@
         </div>
         <br>
         <div class="row">
-            <div class="col">
+            <div class="col table-responsive">
                 <h4 class="text-center">Historial Ayuno</h4>
                 <div class="card rounded shadow p-3 mb-5 bg-body rounded">
-                    <div class="card-body">
+                    <div class="table-responsive">
                         <table class="table table-bordered align-middle">
                             <thead>
                               <tr>

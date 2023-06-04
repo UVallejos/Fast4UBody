@@ -131,7 +131,12 @@
 
                                     <b>Ayuno de un día:</b>
                                     Por último, está el ayuno de un día, que consiste en no comer nada durante 24 horas consecutivas. Esta práctica es muy beneficiosa para reducir la inflamación y aumentar el efecto antioxidante del organismo, pero es importante consultar con un médico antes de realizarlo.
-
+                                    
+                                    <b>¿Que es la cetosis?</b>
+                                    La cetosis es un estado metabólico en el cual el cuerpo comienza a utilizar principalmente cetonas como fuente de energía en lugar de glucosa. Normalmente, el cuerpo obtiene su energía de los carbohidratos que se consumen en la dieta, ya que estos se descomponen en glucosa para ser utilizada como combustible.
+                                    
+                                    La cetosis puede tener varios beneficios, puede ayudar a promover la pérdida de peso y mejorar la sensibilidad a la insulina.
+                                    
                                     @endslot
                                @endcomponent
                                <br>

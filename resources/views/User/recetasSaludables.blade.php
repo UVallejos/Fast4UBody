@@ -6,9 +6,9 @@
 @section("content")
 <br>
 <div class="container">
-    <div class="row">
+    <div class="row row-cols-2">
         @for($i = 0; $i < 6; $i += 2)
-        <div class="col-4">
+        <div class="col">
             <div class="card shadow mb-5 bg-body rounded" id="card_receta">
                 @component("_components.card_receta")
                     @slot("src", asset($recetas[$i]->imagen))
@@ -33,7 +33,7 @@
         </div>
 
         @if(($i+1) < count($recetas))
-            <div class="col-4">
+            <div class="col">
                 <div class="card shadow mb-5 bg-body rounded" id="card_receta">
                     @component("_components.card_receta")
                         @slot("src", asset($recetas[$i+1]->imagen))

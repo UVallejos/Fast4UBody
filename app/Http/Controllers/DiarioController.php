@@ -15,7 +15,8 @@ class DiarioController extends Controller
 
         $user = Auth::user();
         //$ayuno = Ayuno::where('user_id', $user->id)->latest()->get();
-        $ayuno = Ayuno::where('user_id', $user->id)->latest()->get();
+        $ayuno = Ayuno::where('user_id', $user->id)->where('actualmenteAyunando', true)->whereRaw('inicioAyuno < finAyuno')->get();
+
         $ayunos = Ayuno::where('user_id', $user->id)->where("actualmenteAyunando", false)->orderByDesc('id')->get();
         $diarios = Diario::where('user_id', $user->id)->orderByDesc('id')->distinct('imc')->get()->unique('imc');
         $users = User::where('id', $user->id)->latest()->get();
