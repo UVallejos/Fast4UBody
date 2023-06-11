@@ -46,7 +46,7 @@
             <br>
           @csrf
             <div class="row row-cols-2 justify-content-center align-items-center g-2">
-                <div class="col">
+                <div class="col justify-content-center align-items-center">
                   @component("_components.card_ayuno")
                     @slot("src", asset("assets/img/12h.png"))
                     @slot("value", "12")

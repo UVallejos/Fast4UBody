@@ -25,7 +25,7 @@ Definimos las rutas, asociamos a los archivos que tenemos con el tipo de ruta co
 Route::view("/", "index")->name("index");
 Route::view("/iniciar_sesion", "iniciar_sesion")->name("iniciarSesion");
 Route::view("/registro", "registro")->name("registro");
-Route::view("/sobre_el_ayuno", "sobreAyuno3")->name("sobreAyuno");
+Route::view("/sobre_el_ayuno", "sobreAyuno")->name("sobreAyuno");
 Route::view("/herramientas", "herramientas")->name("herramientas");
 
 //Usuario

@@ -32,7 +32,7 @@ class DiarioController extends Controller
                  if ($ahora->gt($fin)) {
                     $ayun->actualmenteAyunando = false;
                     $ayun->save();
-                    return $ayuno;
+                    return view("User.diarioAyuno", compact("diarios", "ayunos", "users","ayuno"));
                     
                  }
             }
