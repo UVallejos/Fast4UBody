@@ -1,5 +1,6 @@
+
 body {
-    height: auto;
+  
 }
 
 
@@ -62,6 +63,10 @@ hr {
     background-color: rgb(250, 219, 83);
 }
 
+#navBarFondo{
+  padding: 0px;
+}
+
 /*Menú desplegable*/
 .desplegable {
   display: none;
@@ -111,4 +116,38 @@ hr {
 #sidemenu a:hover{
   border-radius: 15px;
   background-color: rgb(250, 219, 83);
+}
+
+.titulo{
+  font-family: 'OMEGLE', sans-serif;
+  font-size: 10rem; /* Tamaño de texto inicial */
+  color: #8f2c2c ;
+  text-shadow: 2px 1px 3px #878a5b;
+  margin: 0px;
+}
+
+/*Responsive del título*/
+
+@media screen and (max-width: 768px) {
+    .titulo {
+        font-size: 5rem; /* Tamaño de texto en pantallas pequeñas */
+    }
+}
+
+@media screen and (max-width: 912px) {
+  .titulo {
+      font-size: 7rem; /* Tamaño de texto en pantallas pequeñas */
+  }
+}
+
+@media screen and (max-width: 480px) {
+    .titulo {
+        font-size: 4rem; /* Tamaño de texto en pantallas más pequeñas */
+    }
+}
+
+.tituloBienvenida{
+  font-family: 'OMEGLE', sans-serif;
+  font-size: 60px;
+  margin: 0px;
 }

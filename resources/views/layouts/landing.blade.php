@@ -16,6 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/omegle" rel="stylesheet">
 
   <link rel="icon" href="{{ asset("assets/img/logotipo.png") }}">
   <!-- Required meta tags -->

@@ -12,7 +12,7 @@
       </div>
     </div>
     <div class="row justify-content-center align-items-center g-2" id="tituloIndex">
-      <h1 class="display-3 text-center">Buenvenidos {{  }}</h1>
+      <h1 class=" text-center">Bienvenidos {{ User::get("name") }}</h1>
     </div>
   </div>
   <div class="container-sm">

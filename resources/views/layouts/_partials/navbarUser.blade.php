@@ -2,11 +2,12 @@
   <header>
     <div class="container" id="cabecera">
       <div class="row ">
-        <div class="col justify-content-center"><h1 class="display-4 text-center">Fast4UBody</h1></div>
+        <div class="col justify-content-center"><h1 class=" titulo text-center text-md">Fast4UBody</h1></div>
       </div>
     </div>
     <nav class="navbar navbar-expand-lg navbar-light" id="navBarFondo">
       <div class="container-fluid">
+        
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -53,8 +54,9 @@
 <header>
     <div class="container" id="cabecera">
       <div class="row ">
-        <div class="col justify-content-center"><h1 class="display-4 text-center">Fast4UBody</h1></div>
+        <div class="col justify-content-center"><h1 class=" titulo text-center text-md">Fast4UBody</h1></div>
       </div>
+    </div>
     </div>
     <nav class="navbar navbar-expand-lg navbar-light" id="navBarFondo" >
       <div class="container-fluid">

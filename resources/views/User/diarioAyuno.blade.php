@@ -10,10 +10,10 @@
     </div>
     <br>
     <div class="container">
-        <div class="row p-3 mb-5">
+        <div class="row">
           <div class="col">
             <h4 class="text-center">Ayuno Actual</h4>
-            <div class="card rounded shadow p-3 mb-5 bg-body rounded">
+            <div class="card rounded shadow p-3 bg-body rounded">
                 <div class="table-responsive" >
                     <form action="{{ route('finalizar_ayuno') }}" method="post">
                       @csrf
@@ -48,7 +48,7 @@
 
                                         $tiempoHastaComer = Carbon\Carbon::parse($ayun->finAyuno)->diffForHumans();
                                     @endphp
-                                    @if($inicio <= $fin and $ayun->actualmenteAyunando)
+                                    @if($ayun->actualmenteAyunando)
                                         <tr>
                                             <th></th>
                                             <td colspan="2">{{ $inicio }}</td>
@@ -84,11 +84,11 @@
                 </div>
             </div>
           </div>
-          <div class="col table-responsive">
+          <div class="col">
             <h4 class="text-center">Medidas</h4>
-            <div class="card rounded shadow p-3 mb-5 bg-body rounded">
+            <div class="card rounded shadow p-3 bg-body rounded">
                 <div class="table-responsive">
-                    <table class="table table-striped table-hover ">
+                    <table class="table table-bordered ">
                         <thead>
                           <tr>
                             <th scope="col">Fecha</th>
@@ -106,7 +106,23 @@
                                   <td>{{ $item->altura }} Cm</td>
                                   <td>{{ $item->pesoInicial }} Kg</td>
                                   <td>{{ $item->pesoObjetivo }} Kg</td>
-                                  <td>{{ $item->imc }}</td>
+                                  <td class="
+                                        @if ($item->imc < 18.5)
+                                            table-light
+                                        @elseif ($item->imc >= 18.5 && $item->imc <= 24.9)
+                                            table-success
+                                        @elseif ($item->imc >= 25.0 && $item->imc <= 29.9)
+                                            table-info
+                                        @elseif ($item->imc >= 30.0 && $item->imc <= 34.9)
+                                            table-warning
+                                        @elseif ($item->imc >= 35.0 && $item->imc <= 39.9)
+                                            table-danger
+                                        @elseif ($item->imc > 40)
+                                            table-dark
+                                        @endif
+                                        ">
+                                        {{ $item->imc }}
+                                  </td>
                                   <td>
                                     <form action="{{ route('eliminar_registro_m') }}" method="POST" >
                                         @csrf
@@ -123,21 +139,21 @@
                       </table>
                 </div>
             </div>
+            
           </div>
+          
         </div>
         <br>
         <div class="row">
-            <div class="col table-responsive">
+            <div class="col-6">
                 <h4 class="text-center">Historial Ayuno</h4>
-                <div class="card rounded shadow p-3 mb-5 bg-body rounded">
+                <div class="card rounded shadow p-3 bg-body rounded">
                     <div class="table-responsive">
                         <table class="table table-bordered align-middle">
                             <thead>
                               <tr>
                                 <th>Fecha inicio</th>
-                                <th>Hora Inicio</th>
                                 <th>Fecha Fin</th>
-                                <th>Hora Fin</th>
                                 <th>Tiempo Ayunado</th>
                                 <th>Tipo Ayuno</th>
                                 <th>Eliminar</th>
@@ -146,23 +162,25 @@
                             <tbody>
                               @forelse ($ayunos as $ayuno)
                                     @php
-                                        $inicio = Carbon\Carbon::parse($ayuno->created_at->format('h:i'));
-                                        $fin = Carbon\Carbon::parse($ayuno->updated_at->format('h:i'));
-
-                                        $diferenciaSegundos = $fin->diffInSeconds($inicio);
-                                        $horas = floor($diferenciaSegundos / 3600);
-                                        $minutos = floor(($diferenciaSegundos % 3600) / 60);
-                                        $duracion = sprintf("%02d:%02d", $horas, $minutos);
+                                       $inicio = Carbon\Carbon::parse($ayuno->inicioAyuno);
+                                       $fin = Carbon\Carbon::parse($ayuno->finAyuno);
+                                       $diferenciaSegundos = $fin->diffInSeconds($inicio);
+                                       $horas = floor($diferenciaSegundos / 3600);
+                                       $minutos = floor(($diferenciaSegundos % 3600) / 60);
+                                       $duracion = sprintf("%02d:%02d", $horas, $minutos);
+                                        
 
                                         //$tiempoHastaComer = Carbon\Carbon::parse($ayuno->finAyuno)->diffForHumans();
                                     @endphp
                                 <tr>
-                                  <td>{{ $ayuno->created_at->format('d/m/Y') }}</td>
-                                  <td>{{ $ayuno->created_at->format('h:i a') }}</td>
-                                  <td>{{ $ayuno->updated_at->format('d/m/Y') }}</td>
-                                  <td>{{ $ayuno->updated_at->format('h:i a') }}</td>
+                                  <td>{{  Carbon\Carbon::parse($ayuno->inicioAyuno)->format('d/m/Y') }}
+                                      <br>{{  Carbon\Carbon::parse($ayuno->inicioAyuno)->format('h:i a') }}
+                                  </td>
+                                  <td>{{  Carbon\Carbon::parse($ayuno->finAyuno)->format('d/m/Y') }}
+                                      <br>{{  Carbon\Carbon::parse($ayuno->finAyuno)->format('h:i a') }}
+                                  </td>
                                   <td>{{ $duracion }}</td>
-                                  <td>{{ $ayuno->tipoAyuno }} Hrs</td>
+                                  <td>{{ $ayuno->tipoAyuno }}:00 Hrs</td>
                                   <td>
                                     <form action="{{ route('eliminar_registro') }}" method="POST" >
                                         @csrf
@@ -179,6 +197,43 @@
                           </table>
                     </div>
                 </div>
+            </div>
+            <div class="col-6">
+                    <h4 class="text-center">Tabla IMC de la OMS</h4>
+                    <div class="card rounded shadow p-3 bg-body rounded" id="IMC">
+                        <section id="tablaIMC">
+                          <table class="table table-bordered">
+                            <thead>
+                              <tr class="table-light">
+                                <th >Por debajo de 18.5</th>
+                                <th >Bajo peso</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th class="table-success">18,5&mdash;24,9</th>
+                                <td class="table-success">Peso normal</td>
+                              </tr>
+                              <tr>
+                                <th class="table-info">25.0&mdash;29.9</th>
+                                <td class="table-info">Pre-obesidad o Sobrepeso</td>
+                              </tr>
+                              <tr>
+                                <th class="table-warning">30.0&mdash;34.9</th>
+                                <td class="table-warning">Obesidad clase I</td>
+                              </tr>
+                              <tr>
+                                <th class="table-danger">35,0&mdash;39,9</th>
+                                <td class="table-danger">Obesidad clase II</td>
+                              </tr>
+                              <tr>
+                                <th class="table-dark">Por encima de 40</th>
+                                <td class="table-dark">Obesidad clase III</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </section>
+                    </div>
             </div>
         </div>
     </div>

@@ -28,6 +28,21 @@
                     </div>
                   @endif
             </div>
+            <div class="form-group row mb-0">
+              <div class="">
+                <br>
+                <h6 class="text-center">
+                  En caso de tener duda sobre los diferentestipos de ayuno, puedes informarte haciendo clic 
+                  <a href="{{ route('sobreAyuno') }}#tiposAyuno">Aquí</a></h6>
+                  @if(session('success'))
+                    <div class="alert alert-success" role="alert">
+                        <ul>
+                            {{ session('success') }}
+                        </ul>
+                    </div>
+                  @endif
+              </div>
+          </div>
             <br>
           @csrf
             <div class="row row-cols-2 justify-content-center align-items-center g-2">

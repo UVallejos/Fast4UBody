@@ -7,7 +7,10 @@
 @section("content")
 <br>
   <div class="container">
-        <h1 class="display-3 text-center">Bienvenidos a Fast4UBody</h1>
+      @if(auth()->check())
+        <h1 class="tituloBienvenida text-center">Bienvenido {{ auth()->user()->name }}</h1>
+      @endif        
+       
       <div class="row justify-content-center align-items-center g-2">
         <div class="col-8">
           <img src="{{ asset('assets/img/fondo.jpg') }}" class="img-fluid shadow-lg rounded" alt="Bienvenido">

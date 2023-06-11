@@ -41,4 +41,5 @@ class Ayuno extends Model
     ];
 
 
+
 }

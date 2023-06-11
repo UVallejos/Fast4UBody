@@ -11,18 +11,8 @@ use Carbon\Carbon;
 
 class AyunoController extends Controller
 {
+    
     public function iniciar_ayuno(){
-
-        $user = Auth::user();
-
-        // Consultar los registros de ayuno y diario correspondientes al usuario
-        $ayuno = Ayuno::where('user_id', $user->id)->get();
-        $diario = Diario::where('user_id', $user->id)->get();
-        $data = collect([$ayuno,$diario])->collapse();
-
-        // Almacenar los registros en una variable de sesión
-        session(['user_data' => $data]);
-
         return view("User.iniciarAyuno");
     }
 
