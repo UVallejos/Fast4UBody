@@ -10,6 +10,7 @@
     </div>
     <br>
     <div class="container">
+        <!--Ayuno Actual--> 
         <div class="row justify-content-center align-items-center g-2">
           <div class="col">
                 <h4 class="text-center">Ayuno Actual</h4>
@@ -69,13 +70,6 @@
                                       </tr>
                                       @endif
                                   @endforeach
-                            
-                              @else
-                                <tr>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                </tr>
                               @endif
                           </tbody>
                         </table>
@@ -85,10 +79,11 @@
             </div>
         </div>
         <br>
+        <!--Tabla IMC--> 
         <div class="row justify-content-center align-items-center g-2">
           <div class="col">
                     <div class="card rounded shadow p-3 bg-body rounded" id="IMC">
-                      <h4 class="text-center">Tabla IMC de la OMS</h4>
+                      <h4 class="text-center">Tabla de IMC</h4>
                       <div class="table-responsive">
                           <table class="table table-bordered">
                             <thead>
@@ -117,6 +112,7 @@
             </div>
         </div>
         <br>
+        <!--Historial Medidas--> 
         <div class="row justify-content-center align-items-center g-2 ">
           <div class="col">
             <div class="card rounded shadow p-3 bg-body rounded">
@@ -187,7 +183,7 @@
                                         {{ $item->imc }}
                                   </td>
                                   <td>
-                                    <form action="{{ route('eliminar_registro_m') }}" method="POST" >
+                                    <form action="{{ route('eliminar_registro_medidas') }}" method="POST" >
                                         @csrf
                                         <button name="id" type="submit" class="btn btn-danger" value="{{ $item->id }}" acc>
                                           Eliminar
@@ -207,6 +203,7 @@
           </div>
         </div>
         <br>
+        <!--Historial Ayuno--> 
         <div class="row justify-content-center align-items-center g-2">
             <div class="col">
                 
@@ -232,9 +229,6 @@
                                        $horas = floor($diferenciaSegundos / 3600);
                                        $minutos = floor(($diferenciaSegundos % 3600) / 60);
                                        $duracion = sprintf("%02d:%02d", $horas, $minutos);
-                                        
-
-                                        //$tiempoHastaComer = Carbon\Carbon::parse($ayuno->finAyuno)->diffForHumans();
                                     @endphp
                                 <tr>
                                   <td>{{  Carbon\Carbon::parse($ayuno->inicioAyuno)->format('d/m/Y') }}
@@ -246,7 +240,7 @@
                                   <td>{{ $duracion }} H:m</td>
                                   <td>{{ $ayuno->tipoAyuno }}:00 H:m</td>
                                   <td>
-                                    <form action="{{ route('eliminar_registro') }}" method="POST" >
+                                    <form action="{{ route('eliminar_registro_ayuno') }}" method="POST" >
                                         @csrf
                                         <button name="id" type="submit" class="btn btn-danger" value="{{ $ayuno->id }}" acc>
                                           Eliminar

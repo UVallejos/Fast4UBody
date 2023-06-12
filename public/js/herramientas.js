@@ -143,11 +143,4 @@ function calcularCalorias() {
   console.log(caloriasMantenerTD);
   console.log(caloriasSubirTD);
 
-
- /*
-  // Asignar valores a las celdas de la tabla
-  caloriasBajarTD.innerText =  (caloriasParaBajar.toFixed(2));
-  caloriasMantenerTD.innerText = (caloriasParaMantener.toFixed(2));
-  caloriasSubirTD.innerText = (caloriasParaSubir.toFixed(2));
-  */
 }

@@ -5,10 +5,11 @@
 
 @section("content")
 <br>
+<!--Mostrar las recetas saludables de la base de datos-->
 <div class="container">
-    <div class="row row-cols-2">
+    <div class="row row-cols-2 d-flex justify-content-center" style="max-height: 900px; overflow-y: auto;">
         @for($i = 0; $i < 6; $i += 2)
-        <div class="col">
+        <div class="col-5">
             <div class="card shadow mb-5 bg-body rounded" id="card_receta">
                 @component("_components.card_receta")
                     @slot("src", asset($recetas[$i]->imagen))
@@ -33,7 +34,7 @@
         </div>
 
         @if(($i+1) < count($recetas))
-            <div class="col">
+            <div class="col-5">
                 <div class="card shadow mb-5 bg-body rounded" id="card_receta">
                     @component("_components.card_receta")
                         @slot("src", asset($recetas[$i+1]->imagen))

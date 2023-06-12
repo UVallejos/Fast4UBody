@@ -10,7 +10,7 @@
       @if(auth()->check())
         <h1 class="tituloBienvenida text-center">Bienvenido {{ auth()->user()->name }}</h1>
       @endif        
-       
+      <!--Img Index-->
       <div class="row justify-content-center align-items-center g-2">
         <div class="col-8">
           <img src="{{ asset('assets/img/fondo.jpg') }}" class="img-fluid shadow-lg rounded" alt="Bienvenido">
@@ -18,6 +18,7 @@
       </div>
   </div>
   <br>
+  <!--Cards Index-->
   <div class="container-sm">
     <div class="row">
       <div class="col">

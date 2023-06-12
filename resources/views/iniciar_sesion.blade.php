@@ -20,6 +20,7 @@
                         </ul>
                     </div>
                 @endif
+                <!--Formulario de Inicio de sesión-->
                 @component('_components.formLogin')
                     @slot('action', route("iniciar_sesion"))
                     @slot('title', "Iniciar Sesión")

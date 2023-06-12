@@ -38,8 +38,8 @@ Route::put("/mi-cuenta/editar", [UserController::class, "modificar_usuario"])->m
 //Diario Ayuno
 Route::put("/diario-ayuno/actualizar", [DiarioController::class, "actualizar_registros"])->middleware("auth")->name("actualizar_diario");
 Route::get("/diario-ayuno", [DiarioController::class, "mostrar_diario"])->middleware("auth")->name("mostrar_diario");
-Route::post("/diario-ayuno/eliminar", [DiarioController::class, "eliminar_registro"])->middleware("auth")->name("eliminar_registro");
-Route::post("/diario-ayuno/eliminarM", [DiarioController::class, "eliminar_registro_m"])->middleware("auth")->name("eliminar_registro_m");
+Route::post("/diario-ayuno/eliminar", [DiarioController::class, "eliminar_registro_ayuno"])->middleware("auth")->name("eliminar_registro_ayuno");
+Route::post("/diario-ayuno/eliminarM", [DiarioController::class, "eliminar_registro_medidas"])->middleware("auth")->name("eliminar_registro_medidas");
 Route::put("/diario-ayuno/modificar_peso", [DiarioController::class, "modificar_peso"])->middleware("auth")->name("modificar_peso");
 
 //Ayuno

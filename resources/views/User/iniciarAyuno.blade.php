@@ -15,7 +15,7 @@
                   </ul>
               </div>
             @endif
-
+        <!--Guardar Ayuno-->
         <form method="post" action="{{ route('guardar_ayuno') }}">
             <br>
             <div class="row justify-content-center align-items-center g-2">
@@ -45,6 +45,7 @@
           </div>
             <br>
           @csrf
+            <!--Cards con las diferentes opciones de Ayunos-->
             <div class="row row-cols-2 justify-content-center align-items-center g-2">
                 <div class="col justify-content-center align-items-center">
                   @component("_components.card_ayuno")

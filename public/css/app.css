@@ -1,75 +1,76 @@
-
-body {
-  
-}
-
-
+/* Estilos para el titulo Fast4UBody */
 #tituloIndex {
-    margin-top: 40px;
-    margin-bottom: 40px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
+/* Estilos para el elemento con id "tituloReceta" */
 #tituloReceta {
-    margin-top: 40px;
-    margin-bottom: 40px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
-.card-body{
-    margin-left: 0px;
+/* Estilos para el contenido de las cards */
+.card-body {
+  margin-left: 0px;
 }
 
+/* Estilos para el elemento hr (línea horizontal) */
 hr {
-    display: block;
-    unicode-bidi: isolate;
-    margin-block-start: 0.5em;
-    margin-block-end: 0.5em;
-    margin-inline-start: auto;
-    margin-inline-end: auto;
-    overflow: hidden;
-    border-style: inset;
-    border-width: 1px;
+  display: block;
+  unicode-bidi: isolate;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  overflow: hidden;
+  border-style: inset;
+  border-width: 1px;
 }
 
+/* Estilos para elementos con la clase "fuente_grande" */
 .fuente_grande {
-    font-size: 25px; /* Ajusta el tamaño de texto */
-    font-family: 'Raleway', sans-serif;
+  font-size: 25px;
+  font-family: 'Raleway', sans-serif;
 }
 
-
+/* Estilos para los elementos li dentro de .sublinks */
 .sublinks li {
-    margin-left: 10px;
-  }
+  margin-left: 10px;
+}
 
-
-/*Estilos Nav Bar General*/
+/* Fuente para la barra de navegación */
 @import url('https://fonts.googleapis.com/css2?family=Crete+Round&family=Nunito&family=Raleway:ital,wght@1,600&display=swap');
 
+/* Estilos para ela barra de navegación */
 #navBarUl {
-    border-radius: 50px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    background-color: rgb(255, 247, 221);
+  border-radius: 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  background-color: rgb(255, 247, 221);
 }
 
-#navBarLi a{
-    font-size: 20px;
-    text-align: center;
-    padding: 10px;
-    text-decoration: none;
-    font-family: 'Poppins', sans-serif;
-    color: black;
-    
+/* Estilos para los elementos a dentro de los elementos li en la barra de navegación */
+#navBarLi a {
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  color: black;
 }
 
-#navBarLi:hover{
-    border-radius: 50px;
-    background-color: rgb(250, 219, 83);
+/* Estilos cuando se pasa el cursor por encima de los elementos li en la barra de navegación */
+#navBarLi:hover {
+  border-radius: 50px;
+  background-color: rgb(250, 219, 83);
 }
 
-#navBarFondo{
+/* Estilos para el fondo de la barra de navegación */
+#navBarFondo {
   padding: 0px;
 }
 
-/*Menú desplegable*/
+/* Estilos para el menú desplegable */
 .desplegable {
   display: none;
   position: absolute;
@@ -80,30 +81,34 @@ hr {
   padding-left: 0px;
 }
 
+/* Mostrar el menú desplegable cuando se pasa el cursor por encima del elemento li o cuando se selecciona */
 .nav-item.dropdown:hover .desplegable,
 .nav-item.dropdown:focus-within .desplegable {
   display: block;
 }
 
+/* Estilos para los elementos en el menú desplegable */
 .item-desplegable {
   font-size: 18px;
   display: block;
   text-decoration: none;
   color: black;
 }
+
+/* Estilos cuando se pasa el cursor por encima de los elementos en el menú desplegable */
 .item-desplegable:hover {
   background-color: rgb(250, 219, 83);
 }
 
-/*Estilos NavBar Sobre Ayuno*/
-#sidemenu{
+/* Estilos específicos para la barra de navegación sobre ayuno */
+#sidemenu {
   background-color: rgb(255, 247, 221);
   border-radius: 10px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  margin-top: 130px;
 }
 
-#asideNav a{
+/* Estilos para los enlaces dentro de #asideNav */
+#asideNav a {
   text-decoration: none;
   color: black;
   font-family: 'Poppins', sans-serif;
@@ -112,53 +117,35 @@ hr {
   padding-bottom: 8px;
 }
 
-#sidemenu li:hover{
+/* Estilos cuando se pasa el cursor por encima de los elementos li en el menú lateral */
+#sidemenu li:hover {
   border-radius: 15px;
   background-color: rgb(250, 219, 83);
 }
 
-#sidemenu a:hover{
+/* Estilos cuando se pasa el cursor por encima de los enlaces en el menú lateral */
+#sidemenu a:hover {
   border-radius: 15px;
   background-color: rgb(250, 219, 83);
 }
 
-.titulo{
+/* Estilos para el título */
+.titulo {
   font-family: 'OMEGLE', sans-serif;
-  font-size: 10rem; /* Tamaño de texto inicial */
-  color: #8f2c2c ;
+  font-size: 10rem;
+  color: #8f2c2c;
   text-shadow: 2px 1px 3px #878a5b;
   margin: 0px;
 }
 
-/*Responsive del título*/
-
-@media screen and (max-width: 768px) {
-    .titulo {
-        font-size: 5rem; /* Tamaño de texto en pantallas pequeñas */
-    }
-}
-
-@media screen and (max-width: 912px) {
-  .titulo {
-      font-size: 7rem; /* Tamaño de texto en pantallas pequeñas */
-  }
-}
-
-@media screen and (max-width: 480px) {
-    .titulo {
-        font-size: 4rem; /* Tamaño de texto en pantallas más pequeñas */
-    }
-}
-
-.tituloBienvenida{
+/* Estilos para el título de bienvenida */
+.tituloBienvenida {
   font-family: 'OMEGLE', sans-serif;
   font-size: 60px;
   margin: 0px;
 }
 
-
-/*Tabla*/
-
+/* Estilos para tablas y sus elementos */
 table,
 thead,
 tr,
@@ -166,4 +153,23 @@ tbody,
 th,
 td {
   text-align: center;
+}
+
+/* Estilos responsivos para el título en diferentes tamaños de pantalla */
+@media screen and (max-width: 768px) {
+  .titulo {
+      font-size: 5rem;
+  }
+}
+
+@media screen and (max-width: 912px) {
+  .titulo {
+      font-size: 7rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .titulo {
+      font-size: 4rem;
+  }
 }

@@ -5,6 +5,7 @@
 
 @section("content")
 <br>
+<!--Img Index-->
 <div class="container">
     <div class="row justify-content-center align-items-center g-2">
       <div class="col-8">
@@ -12,9 +13,11 @@
       </div>
     </div>
     <div class="row justify-content-center align-items-center g-2" id="tituloIndex">
+      <!--Nombre del usuario con sesión iniciada-->
       <h1 class=" text-center">Bienvenidos {{ User::get("name") }}</h1>
     </div>
   </div>
+   <!--Cards Index-->
   <div class="container-sm">
     <div class="row">
       <div class="col">

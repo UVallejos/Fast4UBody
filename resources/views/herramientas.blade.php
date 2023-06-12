@@ -6,6 +6,7 @@
     <br>
     <div class="container">
         <div class="row justify-content-center align-items-center g-2">
+            <!--Calculadora de IMC-->
             <div class="col">
                 <div class="col card rounded shadow p-3 mb-5 bg-body rounded " id="IMC">
                     <section id="CalcIMC">
@@ -17,8 +18,9 @@
                     </section>
                 </div>
             </div>
-            <div class="col">
-                <div class="col offset-1 card rounded shadow p-3 mb-5 bg-body rounded " id="caloriasD">
+                
+            <!--Calculadora de Actividad-->
+            <div class="col offset-1 card rounded shadow p-3 mb-5 bg-body rounded " id="caloriasD">
                     <section id="CalcAct">
                         @component('_components.activCal')
                             @slot('action', "#")
@@ -28,9 +30,6 @@
                     </section>
                 </div>
             </div>
-        </div>
-        <div class="row justify-content-center align-items-center g-2">
-            
         </div>
     </div>
 

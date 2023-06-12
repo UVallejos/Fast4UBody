@@ -15,6 +15,8 @@
                         {{ session('success') }}
                     </div>
                 @endif
+
+                <!--Formulario de Registro de Cuenta-->
                 <section id="register_div">
                     <form action="{{ route('mi_cuenta_e') }}" method="POST">
                         @csrf

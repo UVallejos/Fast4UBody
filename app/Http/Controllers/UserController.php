@@ -10,9 +10,19 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
-{   
+{  
+    //Muestra la vista miCuenta
+    public function mostrar_usuario(){
+        $user_id = auth()->id();
+        $user = User::find($user_id);
+
+        return view("User.miCuenta", ["user" => $user]);
+    }
+    
+    //Registro de Usuarios
     public function registro(Request $request){
 
+        //Cumplementamos campos del registro en l base de datos
         $user = new User();
 
         $user-> name = $request -> username;
@@ -22,17 +32,21 @@ class UserController extends Controller
         $user-> altura = $request -> altura;
         $user-> password = Hash::make($request -> password);
 
+        //Guardamos en base de datos
         $user->save();
 
+        //Utilizamos Función login y pasamos el $user que hemos creado
         Auth::login($user);
         
         //Obtenemos los datos del usuario para registrarlo en el diarío de Ayuno
         $crearDiario = new DiarioController();
         $crearDiario->crearDiarioAyuno();
 
+        //Redireccionamos a miCuenta
         return redirect(route("mi_cuenta"));
     }
 
+    //Iniciar sesión con correo y contraseña ya registrados
     public function iniciar_sesion(Request $request){
 
         $credentials = [
@@ -52,8 +66,10 @@ class UserController extends Controller
 
     }
 
+    //Cerrar sesión y redirigir a iniciarSesión
     public function cerrar_sesion(Request $request){
 
+        //Llamada a la función logout() de la clase Auth para cerrar la sesión
         Auth::logout();
 
         $request->session()->invalidate();
@@ -62,14 +78,10 @@ class UserController extends Controller
         return redirect(route("iniciarSesion"));
     }
 
-    public function mostrar_usuario(){
-        $user_id = auth()->id();
-        $user = User::find($user_id);
-
-        return view("User.miCuenta", ["user" => $user]);
-    }
-
+    //Obtenemos datos del formulario y modificamos campos en la base de datos
     public function modificar_usuario(Request $request){
+
+        //Validación de datos
         $this->validate($request, [
             'name' => 'required|string|min:5|max:300',
             'pesoObjetivo' => 'required|numeric|min:1|max:500',

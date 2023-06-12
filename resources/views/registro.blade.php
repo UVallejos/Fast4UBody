@@ -8,6 +8,7 @@
     <div><br></div>
         <div class="col-10 card rounded shadow p-3 mb-5 bg-body rounded" id="registro">
             <section id="register_div">
+                <!--Formulario de registro-->
                 @component('_components.formRegistro')
                     @slot('action', route("validar_registro"))
                     @slot('title', "Registro")

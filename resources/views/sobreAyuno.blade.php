@@ -3,11 +3,15 @@
 
 @section('content')
 <br>
+
+
 <div class="container">
     <div class="row flex shadow p-3 mb-5 bg-body rounded">
+
+        <!--Menú de navegación lateral-->
         <aside class="col-auto col-md-3 col-xl-2 px-sm-2 px-0" id="asideNav">
             <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 sticky-md-top" id="sidemenu">
-                <a href="#cabecera" class="nav-link align-middle px-0">Sobre el Ayuno</a>
+                <a href="#cabecera" class="nav-link align-middle px-0">Sobre el Ayuno:</a>
                 <ul  class="nav flex-md-column flex-row justify-content-between ">
                     <li class=""><a class="nav-link" href="#01">Los Orígenes del Ayuno</a></li>
                     <li class=""><a class="nav-link" href="#02">La Autofagia</a></li>
@@ -21,15 +25,19 @@
             </div>
         </aside>
         
-
-        <div class="col-md-9">
+        <!--Contenido-->
+        <div class="col-md-9" style="max-height: 1000px; overflow-y: auto;">
             <div class="row">
                 <div class="col">
                     <div class="py-3" id="SobreAyuno">
                         <h1 class="display-3 text-center mb-3">Sobre el Ayuno</h1>
                         <div class="container">
+
+                            <!--Contenido Sobre Ayuno-->
                             <div class="row justify-content-center align-items-center g-2">
+
                                 <div id="01"></div>
+                                <!--Los Origenes del Ayuno-->
                                @component("_components.card_sobreAyuno")
                                     @slot("src", asset("assets/img/origenes_ayuno.jpg"))
                                     @slot("alt", "ilustración griega")
@@ -47,7 +55,9 @@
                                     @endslot
                                @endcomponent
                                <br>
+
                                <div id="02"></div>
+                               <!--La Autofagia y el Rejuvenecimiento Celular-->
                                @component("_components.card_sobreAyuno")
                                     @slot("src", asset("assets/img/autofagia.jpg"))
                                     @slot("alt", "ilustración de uroboros")
@@ -68,7 +78,9 @@
                                     @endslot
                                @endcomponent
                                <br>
+
                                <div id="03"></div>
+                               <!--Diferencia entre ayuno e inanición-->
                                @component("_components.card_sobreAyuno")
                                     @slot("src", asset("assets/img/ayuno_diferencias.jpg"))
                                     @slot("alt", "img de duda")
@@ -87,7 +99,9 @@
                                     @endslot
                                @endcomponent
                                <br>
+
                                <div id="04"></div>
+                               <!--¿Cómo empezar con el Ayuno intermitente?-->
                                @component("_components.card_sobreAyuno")
                                     @slot("src", asset("assets/img/empezar.jpg"))
                                     @slot("alt", "donde empezar")
@@ -109,7 +123,9 @@
                                     
                                @endcomponent
                                <br>
+
                                <div id="05"></div>
+                               <!--Los diferentes tipos de Ayuno-->
                                @component("_components.card_sobreAyuno")
                                     @slot("src", asset("assets/img/tipos_de_ayuno.jpg"))
                                     @slot("alt", "donde empezar")
@@ -140,7 +156,9 @@
                                     @endslot
                                @endcomponent
                                <br>
+
                                <div id="06"></div>
+                               <!--Consejos para romper el Ayuno-->
                                @component("_components.card_sobreAyuno")
                                     @slot("src", asset("assets/img/romper-ayuno.jpg"))
                                     @slot("alt", "donde empezar")
@@ -176,6 +194,7 @@
                         </div>
                         <hr>
                     </div>
+                    <!--Preguntas y Respuestas-->
                     <div class="py-3" id="PreguntasFrecuentes">
                         <h1 class="display-3 text-center mb-3">Preguntas y Respuestas</h1>
                         <div class="container">
@@ -290,6 +309,8 @@
                         </div>
                         <hr>
                     </div>
+
+                    <!--Noticias-->
                     <div class="py-3" id="Noticias">
                         <h1 class="display-3 text-center mb-3">Noticias</h1>
                         <div class="row justify-content-center align-items-center g-2">
