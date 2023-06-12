@@ -43,7 +43,7 @@ class UserController extends Controller
         if(Auth::attempt($credentials)){
             // Autenticación exitosa, redireccionar al usuario
             $request->session()->regenerate();
-            return redirect()->intended(route("mi_cuenta"));
+            return redirect()->intended(route("index"));
         }
         else{
             //Autenticación fallida, indicamos error en los datos

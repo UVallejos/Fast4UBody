@@ -15,18 +15,18 @@
         <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
           <ul class="navbar-nav" id="navBarUl">
             <li class="nav-item" id="navBarLi">
-              <a class="nav-link active" aria-current="page" href="{{ route('index') }}"> Inicio </a>
+              <a class="nav-link active" aria-current="page" href="{{ route('index') }}">Inicio</a>
             </li>
             
             <li class="nav-item" id="navBarLi">
-              <a class="nav-link active" href="{{ route('mostrar_diario') }}"> Mi Diario de Ayuno </a>
+              <a class="nav-link active" href="{{ route('mostrar_diario') }}">Diario de Ayuno</a>
             </li>
             <li class="nav-item" id="navBarLi">
-              <a class="nav-link active" href="{{ route('iniciar_ayuno') }}"> Iniciar Ayuno </a>
+              <a class="nav-link active" href="{{ route('iniciar_ayuno') }}">Iniciar Ayuno</a>
             </li>
             
             <li class="nav-item dropdown" id="navBarLi">
-              <a class="nav-link active" href="{{ route('mostrar_receta') }}">  Recetas saludables </a>
+              <a class="nav-link active" href="{{ route('mostrar_receta') }}">Recetas</a>
             </li>
             <li class="nav-item dropdown" id="navBarLi">
                     <a a class="nav-link active dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"  >
@@ -66,25 +66,25 @@
         <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
           <ul class="navbar-nav" id="navBarUl">
             <li class="nav-item" id="navBarLi">
-              <a class="nav-link active" aria-current="page" href="{{ route('index') }}"> Inicio </a>
+              <a class="nav-link active" aria-current="page" href="{{ route('index') }}">Inicio</a>
             </li>
             <li class="nav-item" id="navBarLi">
-              <a class="nav-link active" aria-current="page" href="{{ route('iniciarSesion') }}"> Iniciar Sesión </a>
+              <a class="nav-link active" aria-current="page" href="{{ route('iniciarSesion') }}">Iniciar Sesión</a>
             </li>
             <li class="nav-item" id="navBarLi">
-              <a class="nav-link active" aria-current="page" href="{{ route('registro') }}"> Crea una Cuenta </a>
+              <a class="nav-link active" aria-current="page" href="{{ route('registro') }}">Crea Cuenta</a>
             </li>
             <li class="nav-item" id="navBarLi">
-              <a class="nav-link active" href="{{ route('sobreAyuno') }}"> Sobre el Ayuno </a>
+              <a class="nav-link active" href="{{ route('sobreAyuno') }}">Sobre el Ayuno</a>
             </li>
             <li class="nav-item" id="navBarLi">
-              <a class="nav-link active" href="{{ route('sobreAyuno') }}#PreguntasFrecuentes"> Preguntas y respuestas </a>
+              <a class="nav-link active" href="{{ route('sobreAyuno') }}#PreguntasFrecuentes">Preguntas y respuestas</a>
             </li>
             <li class="nav-item" id="navBarLi">
-              <a class="nav-link active" href="{{ route('sobreAyuno') }}#Noticias"> Noticias </a>
+              <a class="nav-link active" href="{{ route('sobreAyuno') }}#Noticias">Noticias</a>
             </li>
             <li class="nav-item dropdown" id="navBarLi">
-              <a class="nav-link active" href="{{ route('herramientas') }}"> Herramientas </a>
+              <a class="nav-link active" href="{{ route('herramientas') }}">Herramientas</a>
             </li>
           </ul>
         </div>

@@ -47,14 +47,15 @@ hr {
 #navBarUl {
     border-radius: 50px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: rgb(255, 247, 221);
 }
 
 #navBarLi a{
     font-size: 20px;
     text-align: center;
-    padding: 15px;
+    padding: 10px;
     text-decoration: none;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: black;
     
 }
@@ -95,15 +96,17 @@ hr {
 }
 
 /*Estilos NavBar Sobre Ayuno*/
-#asideNav {
+#sidemenu{
+  background-color: rgb(255, 247, 221);
   border-radius: 10px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 130px;
 }
 
 #asideNav a{
   text-decoration: none;
   color: black;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Poppins', sans-serif;
   padding-top: 10px;
   padding-right: 16px;
   padding-bottom: 8px;
@@ -151,4 +154,16 @@ hr {
   font-family: 'OMEGLE', sans-serif;
   font-size: 60px;
   margin: 0px;
+}
+
+
+/*Tabla*/
+
+table,
+thead,
+tr,
+tbody,
+th,
+td {
+  text-align: center;
 }

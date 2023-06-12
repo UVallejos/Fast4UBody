@@ -7,7 +7,7 @@
     <div class="row flex shadow p-3 mb-5 bg-body rounded">
         <aside class="col-auto col-md-3 col-xl-2 px-sm-2 px-0" id="asideNav">
             <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 sticky-md-top" id="sidemenu">
-                <a href="#SobreAyuno" class="nav-link align-middle px-0">Sobre el Ayuno</a>
+                <a href="#cabecera" class="nav-link align-middle px-0">Sobre el Ayuno</a>
                 <ul  class="nav flex-md-column flex-row justify-content-between ">
                     <li class=""><a class="nav-link" href="#01">Los Orígenes del Ayuno</a></li>
                     <li class=""><a class="nav-link" href="#02">La Autofagia</a></li>

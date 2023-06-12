@@ -12,10 +12,10 @@
                     </div>
                     <div class="row">
                         <div class="col mb-3">
-                            <input type="text" class="form-control" name="peso" placeholder="Peso Actual Kg" pattern="[0-9]+" required />
+                            <input type="text" class="form-control" name="peso" placeholder="Peso Actual Kg" pattern="[1-9][0-9]*(\.[0-9]+)?" required />
                         </div>
                         <div class="col">
-                            <input type="text" class="form-control" name="pesoObjetivo" placeholder="Peso objetivo Kg" pattern="[0-9]+" required />
+                            <input type="text" class="form-control" name="pesoObjetivo" placeholder="Peso objetivo Kg" pattern="[1-9][0-9]*(\.[0-9]+)?" required />
                         </div>
                     </div>
                     <div class="row">

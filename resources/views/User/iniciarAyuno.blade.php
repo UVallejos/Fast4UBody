@@ -33,7 +33,7 @@
                 <br>
                 <h6 class="text-center">
                   En caso de tener duda sobre los diferentestipos de ayuno, puedes informarte haciendo clic 
-                  <a href="{{ route('sobreAyuno') }}#tiposAyuno">Aquí</a></h6>
+                  <a href="{{ route('sobreAyuno') }}#05">Aquí</a></h6>
                   @if(session('success'))
                     <div class="alert alert-success" role="alert">
                         <ul>
@@ -78,4 +78,5 @@
                 </div>
             </div>
         </form>
+        <br>
 @endsection

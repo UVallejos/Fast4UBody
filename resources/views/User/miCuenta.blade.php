@@ -10,7 +10,7 @@
         <div class="row justify-content-center align-items-center g-2">
                 
             <div class="col-8 card rounded shadow p-3 mb-5 bg-body rounded" id="miCuenta">
-                 @if(session('success'))
+                @if(session('success'))
                     <div class="alert alert-success" role="alert">
                         {{ session('success') }}
                     </div>

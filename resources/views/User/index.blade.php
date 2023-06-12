@@ -29,7 +29,7 @@
         @component('_components.card_index')
             @slot('src', asset('assets/img/opciones_romper_ayuno.jpg'))
             @slot("title", "Descubre los mejores alimentos para romper un periodo de Ayuno")
-            @slot("route", route("sobreAyuno"))
+            @slot("route", route("sobreAyuno") . "#06")
             @slot("content", "Puedes utilizar leer sobre estos alimentos haciendo clic aquí")
         @endcomponent
       </div>
@@ -37,7 +37,7 @@
         @component('_components.card_index')
             @slot('src', asset('assets/img/tipos_de_ayuno.jpg'))
             @slot("title", "Descubre algunos de los diferentes tipo de Ayuno Intermitente")
-            @slot("route", route("sobreAyuno"))
+            @slot("route", route("sobreAyuno"),"#05")
             @slot("content", "Descubrelos aquí")
         @endcomponent
       </div>
