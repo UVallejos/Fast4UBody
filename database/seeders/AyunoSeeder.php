@@ -33,27 +33,27 @@ class AyunoSeeder extends Seeder
             'tipoAyuno' => "12",
             'user_id' => 1,
             'created_at' => "2023-06-03 9:00:51",
-            'updated_at' => "2023-06-03 9:00:51"
+            'updated_at' => "2023-06-03 21:00:51"
         ]);
 
         Ayuno::create([
-            'inicioAyuno' => "2023-05-25 9:00:00",
+            'inicioAyuno' => "2023-06-04 9:00:00",
             'actualmenteAyunando' => false,
-            'finAyuno' => "2023-05-26 3:00:00",
+            'finAyuno' => "2023-06-05 3:00:00",
             'tipoAyuno' => "18",
             'user_id' => 1,
-            'created_at' => "2023-05-25 9:00:00",
-            'updated_at' => "2023-05-25 9:00:00"
+            'created_at' => "2023-06-04 9:00:00",
+            'updated_at' => "2023-06-05 3:00:00"
         ]);
         
         Ayuno::create([
-            'inicioAyuno' => "2023-05-25 9:00:00",
+            'inicioAyuno' => "2023-06-06 9:00:00",
             'actualmenteAyunando' => false,
-            'finAyuno' => "2023-05-26 9:00:00",
+            'finAyuno' => "2023-06-07 9:00:00",
             'tipoAyuno' => "24",
             'user_id' => 1,
-            'created_at' => "2023-05-25 9:00:00",
-            'updated_at' => "2023-05-26 9:00:00"
+            'created_at' => "2023-06-06 9:00:00",
+            'updated_at' => "2023-06-07 9:00:00"
         ]);
     }
 }

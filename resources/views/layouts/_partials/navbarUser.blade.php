@@ -33,7 +33,7 @@
                     Recursos 
                     </a>
                     <ul class="desplegable" aria-labelledby="navbarDropdownMenuLink" id="">
-                        <a class="item-desplegable" href="{{ route('sobreAyuno') }}">Sobre ayuno</a>
+                        <a class="item-desplegable" href="{{ route('sobreAyuno') }}">Sobre Ayuno</a>
                         <a class="item-desplegable" href="{{ route('sobreAyuno') }}#PreguntasFrecuentes">Preguntas y Respuestas</a>
                         <a class="item-desplegable" href="{{ route('sobreAyuno') }}#Noticias">Noticias</a>
                         <a class="item-desplegable" href="{{ route('herramientas') }}">Herramientas</a>
@@ -72,7 +72,7 @@
               <a class="nav-link active" aria-current="page" href="{{ route('iniciarSesion') }}">Iniciar Sesión</a>
             </li>
             <li class="nav-item" id="navBarLi">
-              <a class="nav-link active" aria-current="page" href="{{ route('registro') }}">Crea Cuenta</a>
+              <a class="nav-link active" aria-current="page" href="{{ route('registro') }}">Crear Cuenta</a>
             </li>
             <li class="nav-item" id="navBarLi">
               <a class="nav-link active" href="{{ route('sobreAyuno') }}">Sobre el Ayuno</a>

@@ -15,12 +15,13 @@ return new class extends Migration
     {
         Schema::create('ayunos', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
-            $table->datetime("inicioAyuno");
-            $table->boolean("actualmenteAyunando");
-            $table->datetime("finAyuno");
-            $table->integer("tipoAyuno");
             $table->unsignedBigInteger("user_id");
+            $table->integer("tipoAyuno");
+            $table->datetime("inicioAyuno");
+            $table->datetime("finAyuno");
+            $table->boolean("actualmenteAyunando");
+            $table->timestamps();
+            
         });
     }
 

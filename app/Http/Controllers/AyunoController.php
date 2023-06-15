@@ -16,7 +16,6 @@ class AyunoController extends Controller
         return view("User.iniciarAyuno");
     }
 
-
     //Registra el inicio de un ayuno y redirige a diarioAyuno
     public function registrarAyuno(Request $request){
         $user = Auth::user();
